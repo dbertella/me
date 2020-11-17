@@ -10,8 +10,8 @@ export default {
   breakpoints: ["25em", "40em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512, 1024],
   fonts: {
-    body: "'Asap', sans-serif",
-    heading: "'Asap', sans-serif",
+    body: "system-ui, sans-serif",
+    heading: "system-ui, sans-serif",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {

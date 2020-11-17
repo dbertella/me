@@ -8,11 +8,13 @@ type Props = {
   date: string
   children?: ReactNode
 }
+
 export const Article = ({ title, link, tags, date, children }: Props) => (
   <Card variant="compact">
-    <Heading as="h3" sx={{ fontSize: 4, mb: 3 }}>
+    <Text sx={{ fontSize: 2 }}>{date}</Text>
+    <Heading as="h3" sx={{ fontSize: 4, mb: 2, fontWeight: "bold" }}>
       <Link href={link} target="_blank" rel="noreferrer noopener">
-        [{date}] {title}
+        🖋 {title}
       </Link>
     </Heading>
     {children}

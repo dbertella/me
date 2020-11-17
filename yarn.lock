@@ -6503,6 +6503,14 @@ gatsby-recipes@^0.3.1:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
+gatsby-source-dev@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-dev/-/gatsby-source-dev-0.1.4.tgz#ef8e696ed9b2ba4919d3cfd36a9fbcfe8db1fff5"
+  integrity sha512-dVZ45kdpNMh3w6z6zEEqjfdDSGplw0mryZSr13wz0SQZz+xgU+CiGRTDL1ukKkHX7NXH9S58OlNeKfdYlqTL5Q==
+  dependencies:
+    axios "^0.19.0"
+    query-string "^6.1.0"
+
 gatsby-source-devto@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-devto/-/gatsby-source-devto-1.1.0.tgz#8befc2f84452b6472491d750d623677193ca2334"
@@ -11022,7 +11030,7 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-query-string@^6.13.1:
+query-string@^6.1.0, query-string@^6.13.1:
   version "6.13.7"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.13.7.tgz#af53802ff6ed56f3345f92d40a056f93681026ee"
   integrity sha512-CsGs8ZYb39zu0WLkeOhe0NMePqgYdAuCqxOYKDR5LVCytDZYMGx3Bb+xypvQvPHVPijRXB0HZNFllCzHRe4gEA==

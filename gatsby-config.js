@@ -41,7 +41,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-devto`,
+      resolve: `gatsby-source-dev`,
       options: {
         username: "_denb",
       },

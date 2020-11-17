@@ -10,7 +10,7 @@ type Props = {
 }
 export const Project = ({ title, link, tags, sourceLink, children }: Props) => (
   <Card>
-    <Heading as="h3" sx={{ fontSize: 4, mb: 3 }}>
+    <Heading as="h3" sx={{ fontSize: 4, mb: 3, fontWeight: "bold" }}>
       <Link href={link} target="_blank" rel="noreferrer noopener">
         {title}
       </Link>

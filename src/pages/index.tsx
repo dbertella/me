@@ -9,26 +9,17 @@ import { Project } from "../components/project"
 import { Article } from "../components/article"
 import dayjs from "dayjs"
 
-const orderByDate = (a, b) => {
-  if (
-    dayjs(a.frontmatter.publish_date).isBefore(
-      dayjs(b.frontmatter.publish_date)
-    )
-  ) {
-    return 1
-  }
-  return -1
-}
-
 type Props = {
-  allDevNode: {
-    nodes: {
-      id: string
-      preview: string
-      frontmatter: {
-        title: string
-        tags: string[]
-        publish_date: string
+  allDevArticles: {
+    edges: {
+      node: {
+        article: {
+          id: string
+          title: string
+          tags: string[]
+          url: string
+          created_at: string
+        }
       }
     }[]
   }
@@ -37,10 +28,10 @@ type Props = {
 const Home = ({ data }: PageProps<Props>) => (
   <Layout>
     <SEO title="Daniele Bertella" />
-    <Heading as="h1" sx={{ mt: 4, color: "primary" }}>
+    <Heading as="h1" sx={{ mt: 4, color: "primary", fontWeight: "bold" }}>
       Daniele Bertella 🤘
     </Heading>
-    <Styled.p>
+    <Text sx={{ fontWeight: 700 }}>
       Javascript Engineer at
       <Link
         href="https://revolut.com"
@@ -51,8 +42,8 @@ const Home = ({ data }: PageProps<Props>) => (
         Revolut
       </Link>
       . Based in London, UK
-    </Styled.p>
-    <Flex>
+    </Text>
+    <Flex sx={{ fontWeight: "bold" }}>
       <Link
         href="https://twitter.com/_denb"
         target="_blank"
@@ -69,7 +60,7 @@ const Home = ({ data }: PageProps<Props>) => (
         GitHub
       </Link>
     </Flex>
-    <Heading as="h2" sx={{ mt: 5, mb: 4 }}>
+    <Heading as="h2" sx={{ mt: 5, mb: 4, fontWeight: "bold" }}>
       Projects
     </Heading>
     <Grid columns={["auto", null, "1fr 1fr"]}>
@@ -117,20 +108,24 @@ const Home = ({ data }: PageProps<Props>) => (
         sourceLink="https://github.com/dbertella/nicomandala"
       />
     </Grid>
-    <Heading as="h2" sx={{ mt: 5, mb: 4 }}>
+    <Heading as="h2" sx={{ mt: 5, mb: 4, fontWeight: "bold" }}>
       Articles
     </Heading>
-    {data.allDevNode.nodes
-      .sort(orderByDate)
-      .map(({ id, preview, frontmatter }) => (
+    {data.allDevArticles.edges.map(
+      ({
+        node: {
+          article: { id, url, title, created_at, tags },
+        },
+      }) => (
         <Article
           key={id}
-          link={preview}
-          title={frontmatter.title}
-          date={frontmatter.publish_date}
-          tags={frontmatter.tags}
+          link={url}
+          title={title}
+          date={dayjs(created_at).format("D MMM")}
+          tags={tags}
         />
-      ))}
+      )
+    )}
   </Layout>
 )
 
@@ -138,14 +133,16 @@ export default Home
 
 export const query = graphql`
   query Home {
-    allDevNode {
-      nodes {
-        id
-        preview
-        frontmatter {
-          publish_date
-          tags
-          title
+    allDevArticles(sort: { order: DESC, fields: article___created_at }) {
+      edges {
+        node {
+          article {
+            id
+            title
+            tags
+            url
+            created_at
+          }
         }
       }
     }
