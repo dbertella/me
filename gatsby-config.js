@@ -34,13 +34,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Asap`],
-        display: "swap",
-      },
-    },
-    {
       resolve: `gatsby-source-dev`,
       options: {
         username: "_denb",

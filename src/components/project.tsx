@@ -23,7 +23,7 @@ export const Project = ({ title, link, tags, sourceLink, children }: Props) => (
         </Text>
       ))}
     </Flex>
-    <Flex sx={{ flexWrap: "wrap" }}>
+    <Flex sx={{ flexWrap: "wrap", fontWeight: "bold" }}>
       <Text variant="tag">
         <Link href={link} target="_blank" rel="noreferrer noopener">
           link
