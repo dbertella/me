@@ -31,18 +31,23 @@ const Home = ({ data }: PageProps<Props>) => (
     <Heading as="h1" sx={{ mt: 4, color: "primary" }}>
       Daniele Bertella 🤘
     </Heading>
-    <Text sx={{ fontWeight: 700, mt: 2 }}>
-      Javascript Engineer at
-      <Link
-        href="https://revolut.com"
-        target="_blank"
-        rel="noreferrer noopener"
-        sx={{ ml: 1 }}
-      >
-        Revolut
-      </Link>
-      . Based in London, UK
-    </Text>
+    <Flex sx={{ mt: 2, flexDirection: ["column", null, "row"] }}>
+      <Text sx={{ fontWeight: 700 }}>
+        Javascript Engineer at
+        <Link
+          href="https://revolut.com"
+          target="_blank"
+          rel="noreferrer noopener"
+          sx={{ ml: 1 }}
+        >
+          Revolut
+        </Link>
+      </Text>
+      <Text mx={2} sx={{ display: ["none", null, "block"] }}>
+        &middot;
+      </Text>
+      <Text sx={{ fontWeight: "bold" }}>Based in London, UK</Text>
+    </Flex>
     <Flex sx={{ fontWeight: "bold", mt: 4 }}>
       <Link
         href="https://twitter.com/_denb"
@@ -80,7 +85,7 @@ const Home = ({ data }: PageProps<Props>) => (
       />
       <Project
         emoji="🦖"
-        title="Hector the little Dinosaur"
+        title="Hector the Little Dinosaur"
         link="https://play.google.com/store/apps/details?id=hector.the.little.dinosaur"
         tags={["flutter", "mobile-app", "android", "google-play-store"]}
         sourceLink="https://github.com/dbertella/hector-app"
