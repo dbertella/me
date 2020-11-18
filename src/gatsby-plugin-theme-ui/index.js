@@ -16,7 +16,7 @@ export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
-    heading: 900,
+    heading: 700,
     bold: 700,
   },
   lineHeights: {
@@ -26,11 +26,10 @@ export default {
   zIndices: [0, 1, 2, 3, 5, 8, 13],
   colors: {
     text: "#333",
-    alphaBg: "rgba(64,83,27, 0.7)",
     background: "#fafafa",
     primary: "#000",
-    secondary: "#054490",
-    muted: "#eaeaea",
+    secondary: "#555",
+    muted: "#787878",
     dark: "#40531b",
     light: "#D1DBE8",
   },
@@ -40,18 +39,13 @@ export default {
   cards: {
     primary: {
       position: "relative",
-      padding: 3,
-      borderRadius: 2,
-      border: "1px solid",
-      borderColor: "muted",
-    },
-    compact: {
-      mb: 4,
+      py: 3,
+      display: "flex"
     },
   },
   text: {
     tag: {
-      color: "text",
+      color: "secondary",
       fontSize: 3,
       mr: 2,
     },

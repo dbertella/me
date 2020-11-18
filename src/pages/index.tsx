@@ -2,7 +2,7 @@
 /** @jsx jsx */
 
 import { graphql, PageProps } from "gatsby"
-import { Styled, jsx, Flex, Box, Heading, Link, Grid, Text } from "theme-ui"
+import { jsx, Flex, Box, Heading, Link, Grid, Text } from "theme-ui"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Project } from "../components/project"
@@ -28,7 +28,7 @@ type Props = {
 const Home = ({ data }: PageProps<Props>) => (
   <Layout>
     <SEO title="Daniele Bertella" />
-    <Heading as="h1" sx={{ mt: 4, color: "primary", fontWeight: "bold" }}>
+    <Heading as="h1" sx={{ mt: 4, color: "primary" }}>
       Daniele Bertella 🤘
     </Heading>
     <Text sx={{ fontWeight: 700 }}>
@@ -43,7 +43,7 @@ const Home = ({ data }: PageProps<Props>) => (
       </Link>
       . Based in London, UK
     </Text>
-    <Flex sx={{ fontWeight: "bold" }}>
+    <Flex sx={{ fontWeight: "bold", mt: 4 }}>
       <Link
         href="https://twitter.com/_denb"
         target="_blank"
@@ -60,12 +60,13 @@ const Home = ({ data }: PageProps<Props>) => (
         GitHub
       </Link>
     </Flex>
-    <Heading as="h2" sx={{ mt: 5, mb: 4, fontWeight: "bold" }}>
+    <Heading as="h2" sx={{ mt: 5, mb: 4 }}>
       Projects
     </Heading>
     <Grid columns={["auto", null, "1fr 1fr"]}>
       <Project
-        title="🚜 cascinarampina.it"
+        emoji="🚜"
+        title="cascinarampina.it"
         link="https://cascinarampina.it"
         tags={[
           "nextjs",
@@ -78,37 +79,42 @@ const Home = ({ data }: PageProps<Props>) => (
         sourceLink="https://github.com/dbertella/cascinarampina"
       />
       <Project
-        title="🦖 Hector the little dinosaur"
+        emoji="🦖"
+        title="Hector the little Dinosaur"
         link="https://play.google.com/store/apps/details?id=hector.the.little.dinosaur"
         tags={["flutter", "mobile-app", "android", "google-play-store"]}
         sourceLink="https://github.com/dbertella/hector-app"
       />
       <Project
-        title="💃🏻 donaflormusic.com"
+        emoji="💃🏻"
+        title="donaflormusic.com"
         link="https://https://donaflormusic.com/"
         tags={["gatsby", "theme-ui", "typescript", "netlify", "netlify-cms"]}
         sourceLink="https://github.com/dbertella/dona-flor"
       />
       <Project
-        title="🍴 laruotaimperia.com"
+        emoji="🍴"
+        title="laruotaimperia.com"
         link="https://laruotaimperia.com"
         tags={["gatsby", "theme-ui", "typescript", "netlify", "netlify-cms"]}
         sourceLink="https://github.com/dbertella/la-ruota"
       />
       <Project
-        title="🦕 hector.aureliemercier.com"
+        emoji="🦕"
+        title="hector.aureliemercier.com"
         link="https://hector.aureliemercier.com"
         tags={["gatsby", "theme-ui", "netlify"]}
         sourceLink="https://github.com/dbertella/hector"
       />
       <Project
-        title="🌵 mandala.ildedalo.com"
+        emoji="🌵"
+        title="mandala.ildedalo.com"
         link="https://mandala.ildedalo.com"
         tags={["gatsby", "theme-ui", "netlify"]}
         sourceLink="https://github.com/dbertella/nicomandala"
       />
     </Grid>
-    <Heading as="h2" sx={{ mt: 5, mb: 4, fontWeight: "bold" }}>
+    <Heading as="h2" sx={{ mt: 5, mb: 4 }}>
       Articles
     </Heading>
     {data.allDevArticles.edges.map(

@@ -1,39 +1,50 @@
 import React, { ReactNode } from "react"
-import { Card, Flex, Heading, Link, Text } from "theme-ui"
+import { Box, Card, Flex, Heading, Link, Text } from "theme-ui"
 
 type Props = {
   title: string
+  emoji: string
   link: string
   tags: string[]
   sourceLink: string
   children?: ReactNode
 }
-export const Project = ({ title, link, tags, sourceLink, children }: Props) => (
+export const Project = ({
+  title,
+  emoji,
+  link,
+  tags,
+  sourceLink,
+  children,
+}: Props) => (
   <Card>
-    <Heading as="h3" sx={{ fontSize: 4, mb: 3, fontWeight: "bold" }}>
-      <Link href={link} target="_blank" rel="noreferrer noopener">
-        {title}
-      </Link>
-    </Heading>
-    {children}
-    <Flex sx={{ flexWrap: "wrap" }}>
-      {tags.map(tag => (
-        <Text key={tag} variant="tag">
-          #{tag}
-        </Text>
-      ))}
-    </Flex>
-    <Flex sx={{ flexWrap: "wrap", fontWeight: "bold" }}>
-      <Text variant="tag">
+    <Text sx={{ mr: 2, minWidth: 25 }}>{emoji}</Text>
+    <Box>
+      <Heading as="h3" sx={{ fontSize: 4, mb: 3 }}>
         <Link href={link} target="_blank" rel="noreferrer noopener">
-          link
+          {title}
         </Link>
-      </Text>
-      <Text variant="tag">
-        <Link href={sourceLink} target="_blank" rel="noreferrer noopener">
-          source
-        </Link>
-      </Text>
-    </Flex>
+      </Heading>
+      {children}
+      <Flex sx={{ flexWrap: "wrap" }}>
+        {tags.map(tag => (
+          <Text key={tag} variant="tag">
+            #{tag}
+          </Text>
+        ))}
+      </Flex>
+      <Box sx={{ flexWrap: "wrap", fontWeight: "bold" }}>
+        <Text>
+          <Link href={link} target="_blank" rel="noreferrer noopener">
+            LINK
+          </Link>
+        </Text>
+        <Text>
+          <Link href={sourceLink} target="_blank" rel="noreferrer noopener">
+            SOURCE
+          </Link>
+        </Text>
+      </Box>
+    </Box>
   </Card>
 )
