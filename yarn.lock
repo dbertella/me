@@ -6325,18 +6325,17 @@ gatsby-page-utils@^0.3.0:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-google-analytics@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.5.0.tgz#cf70f9c459bff7b9a7ccedea4ed19bc3aaedfa26"
-  integrity sha512-jTQKIkyAdF4vFiA8rQd4B0pw14LASQF3MF5ZaFBeSncaDYEzwsy+i2GdEr5VQM+aJl99iSWsJ3KYAxbhds34uA==
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    minimatch "3.0.4"
-
 gatsby-plugin-google-fonts@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"
   integrity sha512-p1NVkn27GUnDA5qHM+Z4cCcLCJIardzZXMon3640sT4xuL/AZJbsx3HEt2KY/5oZu0UXIkytkxzV2Da4rQeUIg==
+
+gatsby-plugin-google-tagmanager@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.5.0.tgz#a9495cf11071f6e2bc075c542542914970f625fb"
+  integrity sha512-Bl+TWhxsM5BJ7/YRYklCLsK+1/euiPXVZiS41mvqoQmnRHIx3QEEfgAkrX+j/7HFrR4ADkizlkvaIpMff3KDcg==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
 
 gatsby-plugin-manifest@^2.6.0:
   version "2.6.0"

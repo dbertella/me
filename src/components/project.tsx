@@ -33,18 +33,19 @@ export const Project = ({
           </Text>
         ))}
       </Flex>
-      <Box sx={{ flexWrap: "wrap", fontWeight: "bold" }}>
-        <Text>
+      <Flex sx={{ fontWeight: "bold", mt: 1 }}>
+        <Text variant="tag" sx={{ fontSize: 2 }}>
           <Link href={link} target="_blank" rel="noreferrer noopener">
-            LINK
+            link
           </Link>
         </Text>
-        <Text>
+        <Text pr={2} />
+        <Text variant="tag" sx={{ fontSize: 2 }}>
           <Link href={sourceLink} target="_blank" rel="noreferrer noopener">
-            SOURCE
+            source
           </Link>
         </Text>
-      </Box>
+      </Flex>
     </Box>
   </Card>
 )
