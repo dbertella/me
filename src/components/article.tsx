@@ -11,7 +11,7 @@ type Props = {
 
 export const Article = ({ title, link, tags, date, children }: Props) => (
   <Card>
-    <Text sx={{ mr: 2, minWidth: 25 }}>🖋 </Text>
+    <Text sx={{ mr: 2, minWidth: 25 }}>✏️</Text>
     <Box>
       <Heading as="h3" sx={{ fontSize: 4, mb: 1 }}>
         <Link href={link} target="_blank" rel="noreferrer noopener">

@@ -34,13 +34,13 @@ export const Project = ({
         ))}
       </Flex>
       <Flex sx={{ fontWeight: "bold", mt: 1 }}>
-        <Text variant="tag" sx={{ fontSize: 2 }}>
+        <Text>
           <Link href={link} target="_blank" rel="noreferrer noopener">
             link
           </Link>
         </Text>
-        <Text pr={2} />
-        <Text variant="tag" sx={{ fontSize: 2 }}>
+        <Text mx={2}>&middot;</Text>
+        <Text>
           <Link href={sourceLink} target="_blank" rel="noreferrer noopener">
             source
           </Link>

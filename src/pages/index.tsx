@@ -31,7 +31,7 @@ const Home = ({ data }: PageProps<Props>) => (
     <Heading as="h1" sx={{ mt: 4, color: "primary" }}>
       Daniele Bertella 🤘
     </Heading>
-    <Text sx={{ fontWeight: 700 }}>
+    <Text sx={{ fontWeight: 700, mt: 2 }}>
       Javascript Engineer at
       <Link
         href="https://revolut.com"
@@ -51,7 +51,7 @@ const Home = ({ data }: PageProps<Props>) => (
       >
         Twitter
       </Link>
-      <Box sx={{ mx: 2 }}>🤷‍♂️</Box>
+      <Text mx={2}>&middot;</Text>
       <Link
         href="https://github.com/dbertella"
         target="_blank"
