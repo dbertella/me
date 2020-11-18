@@ -53,7 +53,7 @@ export default {
     tag: {
       color: "text",
       fontSize: 3,
-      ml: 2,
+      mr: 2,
     },
   },
   styles: {
