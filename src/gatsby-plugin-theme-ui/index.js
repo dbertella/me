@@ -30,8 +30,15 @@ export default {
     primary: "#000",
     secondary: "#555",
     muted: "#787878",
-    dark: "#40531b",
-    light: "#D1DBE8",
+    modes: {
+      dark: {
+        text: "#fafafa",
+        background: "#333",
+        primary: "#fff",
+        secondary: "#bbb",
+        muted: "#787878",
+      },
+    },
   },
   links: {
     pageLink,
@@ -40,7 +47,7 @@ export default {
     primary: {
       position: "relative",
       py: 3,
-      display: "flex"
+      display: "flex",
     },
   },
   text: {
@@ -48,6 +55,13 @@ export default {
       color: "secondary",
       fontSize: 3,
       mr: 2,
+    },
+  },
+  buttons: {
+    primary: {
+      background: "transparent",
+      border: "none",
+      outline: "none",
     },
   },
   styles: {

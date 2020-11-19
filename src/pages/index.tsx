@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import { Project } from "../components/project"
 import { Article } from "../components/article"
 import dayjs from "dayjs"
+import { DarkModeToggle } from "../components/dark-toggle"
 
 type Props = {
   allDevArticles: {
@@ -28,9 +29,15 @@ type Props = {
 const Home = ({ data }: PageProps<Props>) => (
   <Layout>
     <SEO title="Daniele Bertella" />
-    <Heading as="h1" sx={{ mt: 4, color: "primary" }}>
-      Daniele Bertella 🤘
-    </Heading>
+    <Flex>
+      <Box sx={{ position: "absolute", right: 0 }}>
+        <DarkModeToggle />
+      </Box>
+      <Heading as="h1" sx={{ mt: 4, color: "primary" }}>
+        Daniele Bertella 🤘
+      </Heading>
+    </Flex>
+
     <Flex sx={{ mt: 2, flexDirection: ["column", null, "row"] }}>
       <Text sx={{ fontWeight: 700 }}>
         Javascript Engineer at
