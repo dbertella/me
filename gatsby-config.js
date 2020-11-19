@@ -3,6 +3,7 @@ module.exports = {
     title: `Daniele Bertella`,
     description: `Javascript Engineer at Revolut. Based in London`,
     author: `@_denb`,
+    siteUrl: `https://danielebertella.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -55,8 +56,8 @@ module.exports = {
         name: `Daniele Bertella`,
         short_name: `DB`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#333`,
+        theme_color: `#000`,
         display: `minimal-ui`,
         icon: `src/images/pinched-fingers.png`, // This path is relative to the root of the site.
       },
