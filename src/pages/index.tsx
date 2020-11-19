@@ -93,7 +93,7 @@ const Home = ({ data }: PageProps<Props>) => (
       <Project
         emoji="💃🏻"
         title="donaflormusic.com"
-        link="https://https://donaflormusic.com/"
+        link="https://donaflormusic.com/"
         tags={["gatsby", "theme-ui", "typescript", "netlify", "netlify-cms"]}
         sourceLink="https://github.com/dbertella/dona-flor"
       />
